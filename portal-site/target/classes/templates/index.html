@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}">
+</head>
+<body>
+    <h1>Welcome to the Portal Site</h1>
+    <div>
+        <h2>Login</h2>
+        <form th:action="@{/login}" method="post">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username"><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password"><br>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+    <div>
+        <h2>Links</h2>
+        <ul>
+            <li><a href="https://www.pixiv.net/" target="_blank">Pixiv</a></li>
+            <li><a href="https://github.com/" target="_blank">GitHub</a></li>
+        </ul>
+    </div>
+    <div>
+        <h2>Twitter Timeline</h2>
+        <a class="twitter-timeline" href="https://twitter.com/TwitterDev" data-width="300" data-height="400">Tweets by TwitterDev</a> 
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
+</body>
+</html>
